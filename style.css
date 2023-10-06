@@ -1,0 +1,200 @@
+:root {
+    /* Colores de la paleta*/
+    --light-color: #ffffff;
+    --dark-color: #202429;
+    --gray-color: #353a40;
+    --bs-body-bg:var(--light-color);
+    --bs-body-color: var(--dark-color);
+    --nav-text: #9b9c9e;
+    --nav-green: #27a844;
+}
+/* Relativamente normal esto */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Saco la linea de abajo de todos los a */
+a{text-decoration: none ;}
+
+
+
+/*                              HEADER                           */
+header {
+    background-color: #353a40 !important;
+}
+header img{
+    width:8rem;
+}
+
+header a {
+    color: var(--dark-color);
+}
+.collapse {
+    /* Se tiene que hacer aca porque sino se rompe el boton, ya que probablmente use
+    display:none cuando tiene que funcionar como boton :c */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav-link{
+    color: var(--nav-text);
+}
+.nav-link:hover{
+    color: var(--light-color);
+}
+.nav-green{
+    color: var(--nav-green);
+}
+
+/* No voy a mentir, solo lo queria para .nav-link.active
+pero no estaba funcionando, asi que copie desde el navegador la propiedad
+que boostrap le ponia y le cambie el color nomas */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--light-color);
+}
+
+
+/* Relativamente genericas estas clases, no las uso casi nunca */
+.centrar{
+    margin-left:auto;
+    margin-right:auto;
+}
+.dotted-underline{
+    border-bottom: 2px dotted var(--dark-color);
+}
+
+
+
+
+/*                          Carrusel                            */
+.carousel {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.carousel-item {
+    height: 72.78vh;
+    background-size:cover;
+    background-position: center;
+}
+
+.carousel-dim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: right;
+}
+.carousel-message{
+    margin-right :7.8vw;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    justify-content: center;
+}
+
+#bsas-1{
+    background-image: url('resources/ba1.jpg');
+}
+#bsas-2{
+    background-image: url('resources/ba2.jpg');
+}
+#bsas-3{
+    background-image: url('resources/ba3.jpg');
+}
+
+.places-description{
+    background-color: var(--gray-color);
+    color: var(--light-color);
+}
+.cuestionario{
+    width:60%;
+}
+
+
+
+footer {
+    background-color: #1d4358;
+}
+footer > *{
+    color: var(--light-color);
+    text-decoration: none; 
+   
+}
+footer  a{
+    color: var(--light-color);
+    display:block;
+}
+footer div{
+    width:80%;
+}
+
+
+
+
+
+/* Button green */
+.btn-green {
+    color: #fff;
+    background-color: #29a744;
+    border-color: #29a744;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background-color: #218a38;
+    border-color: #1e7e33;
+}
+
+.btn-green:focus, .btn-green.focus {
+    box-shadow: 0 0 0 0.2rem rgba(41, 167, 68, 0.5);
+}
+/* Button light green */
+.btn-lightgreen {
+    color: var(--light-color);
+    background-color: #96c93e;
+    border-color: #96c93e;
+}
+
+.btn-lightgreen:hover {
+    color: var(--light-color);
+    background-color: #82b131;
+    border-color: #79a52e;
+}
+
+.btn-lightgreen:focus, .btn-lightgreen.focus {
+    box-shadow: 0 0 0 0.2rem rgba(150, 201, 62, 0.5);
+}
+
+.btn-lightgreen.disabled, .btn-lightgreen:disabled {
+    color: var(--light-color);
+    background-color: #96c93e;
+    border-color: #96c93e;
+}
+
+.btn-lightgreen:not(:disabled):not(.disabled):active, .btn-lightgreen:not(:disabled):not(.disabled).active, .show > .btn-lightgreen.dropdown-toggle {
+    color: var(--light-color);
+    background-color: #79a52e;
+    border-color: #71992b;
+}
+
+.btn-lightgreen:not(:disabled):not(.disabled):active:focus, .btn-lightgreen:not(:disabled):not(.disabled).active:focus, .show > .btn-lightgreen.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(150, 201, 62, 0.5);
+}
+
+@media screen and (max-width:1000px){
+    /* Esto es para que cuando el navbar cambie a modo boton,
+    la animacion no te mueva los boton de izquierda a derecha,
+    que los muestre a la izquierda */
+    .collapse {
+        justify-content: start;
+    }
+/* Tecnicamente esto es un workaround, y no una solucion
+Pero lo soluciono asi, porque me permite usar media queries
+que no habia usado antes */
+}
