@@ -1,10 +1,10 @@
 const PRECIO=200;
 function calcular_precio(precio,cantidad,descuento){
-    cantidad=Math.round(Number(cantidad));
-    if (typeof cantidad !== 'number' || isNaN(cantidad)) {
+    cantidad=Math.floor(Number(cantidad));
+    if (typeof cantidad !== 'number' || isNaN(cantidad) || cantidad < 1) {
         return ""
     }
-    descuento=100-Math.round(Number(descuento)); 
+    descuento=100-Math.floor(Number(descuento)); 
     return precio*cantidad*descuento/100;
 }
 
