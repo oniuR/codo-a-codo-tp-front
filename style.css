@@ -65,7 +65,9 @@ que boostrap le ponia y le cambie el color nomas */
 }
 
 
-
+.inline {
+    display: inline;
+}
 
 /*                          Carrusel                            */
 .carousel {
